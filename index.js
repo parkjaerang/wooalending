@@ -30,9 +30,28 @@ const eventGrid = document.querySelector('.event_grid');
 const eventMore = document.querySelector('.event_more');
 
 if (eventGrid && eventMore) {
+    const STEP = 4;
+    const cards = Array.from(eventGrid.querySelectorAll('.event_card'));
+    let visible = STEP;
+
+    function renderCards() {
+        cards.forEach((card, i) => {
+            card.classList.toggle('is-hidden', i >= visible);
+        });
+        const allShown = visible >= cards.length;
+        eventMore.textContent = allShown ? '閉じる' : 'もっと見る';
+        eventMore.setAttribute('aria-expanded', String(allShown));
+    }
+
     eventMore.addEventListener('click', () => {
-        const collapsed = eventGrid.classList.toggle('is-collapsed');
-        eventMore.textContent = collapsed ? 'もっと見る' : '閉じる';
-        eventMore.setAttribute('aria-expanded', String(!collapsed));
+        if (visible >= cards.length) {
+            visible = STEP;
+            eventGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            visible += STEP;
+        }
+        renderCards();
     });
+
+    renderCards();
 }

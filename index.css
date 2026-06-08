@@ -159,7 +159,7 @@ header{
     flex-direction: column;
 }
 
-.event_grid.is-collapsed .event_card:nth-child(n+5){
+.event_card.is-hidden{
     display: none;
 }
 
