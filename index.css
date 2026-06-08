@@ -348,6 +348,114 @@ header{
     padding: 0 var(--padding) var(--padding);
 }
 
+/* ===== FAQ / よくある質問 ===== */
+#faq{
+    margin-top: 50px;
+    padding: 0 var(--padding);
+}
+
+.faq_head{
+    text-align: center;
+    margin-bottom: 28px;
+    font-family: 'SST', 'Noto Sans JP', sans-serif;
+}
+
+.faq_title{
+    color: var(--font1);
+    font-weight: 900;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.faq_sub{
+    color: var(--hover);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.faq_list{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.faq_item{
+    background-color: var(--white);
+    border: 1px solid var(--font2);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: box-shadow .2s ease;
+}
+
+.faq_item.open{
+    box-shadow: 0 6px 24px rgba(206, 169, 120, 0.22);
+}
+
+.faq_q{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px var(--padding);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'SST', 'Noto Sans JP', sans-serif;
+}
+
+.faq_mark{
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: var(--font2);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq_qtext{
+    flex: 1;
+    color: var(--font1);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.faq_arrow{
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--font2);
+    border-bottom: 2px solid var(--font2);
+    transform: rotate(45deg);
+    transition: transform .25s ease;
+    margin-right: 4px;
+}
+
+.faq_item.open .faq_arrow{
+    transform: rotate(-135deg);
+}
+
+.faq_a{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+}
+
+.faq_a p{
+    padding: 0 var(--padding) 18px calc(var(--padding) + 38px);
+    color: var(--font1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+    font-family: 'SST', 'Noto Sans JP', sans-serif;
+}
+
 /* ===== CTA / 5%割引クーポン ===== */
 #cta_coupon{
     margin-top: 50px;
@@ -504,4 +612,36 @@ header{
         flex: 1 1 50%;
         margin-top: 0;
     }
+}
+
+/* ===== FOOTER ===== */
+#footer{
+    margin-top: 50px;
+    background-color: var(--ink1);
+    padding: 32px var(--padding);
+}
+
+.footer_i{
+    text-align: center;
+    font-family: 'SST', 'Noto Sans JP', sans-serif;
+    color: var(--font1);
+}
+
+.footer_name{
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--font2);
+    margin-bottom: 12px;
+}
+
+.footer_line{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.9;
+    color: var(--hover);
+}
+
+.footer_sep{
+    margin: 0 8px;
+    color: var(--font2);
 }

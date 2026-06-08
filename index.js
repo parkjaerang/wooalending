@@ -55,3 +55,14 @@ if (eventGrid && eventMore) {
 
     renderCards();
 }
+
+document.querySelectorAll('.faq_item').forEach((item) => {
+    const btn = item.querySelector('.faq_q');
+    const answer = item.querySelector('.faq_a');
+
+    btn.addEventListener('click', () => {
+        const isOpen = item.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(isOpen));
+        answer.style.maxHeight = isOpen ? answer.scrollHeight + 'px' : '';
+    });
+});
