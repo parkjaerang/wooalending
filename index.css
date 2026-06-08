@@ -89,7 +89,7 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 80px);
     padding: var(--padding);
     display: flex;
     align-items: end;
@@ -355,22 +355,8 @@ header{
 }
 
 .faq_head{
-    text-align: center;
     margin-bottom: 28px;
     font-family: 'SST', 'Noto Sans JP', sans-serif;
-}
-
-.faq_title{
-    color: var(--font1);
-    font-weight: 900;
-    font-size: 26px;
-    margin-bottom: 8px;
-}
-
-.faq_sub{
-    color: var(--hover);
-    font-size: 13px;
-    font-weight: 400;
 }
 
 .faq_list{
