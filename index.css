@@ -116,7 +116,7 @@ header{
 }
 
 
-.element_wrap .line{
+.line_btn{
     cursor: pointer;
     background-color:var(--line);
     border: none;
@@ -124,7 +124,6 @@ header{
     box-shadow: 0 4px 20px rgba(36, 97, 62, 0.479);
     color: var(--white);
     width: 100%;
-    margin-bottom: 50px;
     border-radius: 10px;
     transform: translateY(0px);
     transition: transform .1s ease-in;
@@ -132,7 +131,7 @@ header{
     font-weight: 700;
 }
 
-.element_wrap .line:hover{
+.line:hover{
     transform: translateY(-1px);
 }
 
@@ -146,7 +145,7 @@ header{
 }
 
 .section_title{
-    color: var(--font1);
+    color: var(--font2);
     padding: 0 var(--padding);
     margin-bottom: 20px;
     font-family: 'SST', 'Noto Sans JP', sans-serif;
@@ -347,4 +346,162 @@ header{
     display: flex;
     justify-content: center;
     padding: 0 var(--padding) var(--padding);
+}
+
+/* ===== CTA / 5%割引クーポン ===== */
+#cta_coupon{
+    margin-top: 50px;
+    padding: 0 var(--padding);
+}
+
+.cta_card{
+    background-color: var(--ink1);
+    border: 1px solid var(--font2);
+    border-radius: 16px;
+    padding: 28px var(--padding);
+    text-align: center;
+    font-family: 'SST', 'Noto Sans JP', sans-serif;
+    color: var(--font1);
+}
+
+.cta_badge{
+    display: inline-block;
+    background-color: var(--line);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+}
+
+.cta_off{
+    font-weight: 900;
+    font-size: 24px;
+    color: var(--font1);
+    margin-bottom: 12px;
+}
+
+.cta_off_num{
+    color: var(--font2);
+    font-size: 40px;
+    line-height: 1;
+}
+
+.cta_desc{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.cta_desc strong{
+    color: var(--font2);
+    font-weight: 700;
+}
+
+.cta_card .line{
+    display: block;
+    max-width: 360px;
+    margin: 0 auto 12px;
+}
+
+.cta_note{
+    font-size: 11px;
+    color: var(--hover);
+}
+
+/* ===== INFORMATION / アクセス ===== */
+#information{
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.info_wrap{
+    padding: 0 var(--padding);
+    font-family: 'SST', 'Noto Sans JP', sans-serif;
+    color: var(--font1);
+}
+
+.info_map{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--ink1);
+}
+
+.info_map iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.info_detail{
+    margin-top: 24px;
+}
+
+.info_block + .info_block{
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid #eee;
+}
+
+.info_label{
+    color: var(--font2);
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.info_text{
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.info_hours{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info_row{
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.info_row dt{
+    flex: 0 0 88px;
+    font-weight: 700;
+}
+
+.info_row dd{
+    flex: 1;
+    color: var(--font1);
+}
+
+.info_row dd span{
+    color: var(--hover);
+    font-size: 12px;
+}
+
+/* 画面が広いときは地図と情報を横並びに */
+@media (min-width: 768px){
+    .info_wrap{
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .info_map{
+        flex: 1 1 50%;
+    }
+
+    .info_detail{
+        flex: 1 1 50%;
+        margin-top: 0;
+    }
 }
