@@ -1,0 +1,128 @@
+/* ===== SST Web Fonts ===== */
+@font-face {
+    font-family: "SST";
+    src: url("./font/SSTLight.TTF") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "SST";
+    src: url("./font/SSTRg.TTF") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "SST";
+    src: url("./font/SSTMedium.TTF") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "SST";
+    src: url("./font/SSTBold.TTF") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "SST";
+    src: url("./font/SSTHeavy.TTF") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+    --white: #fafafa;
+    --black : #1a1a1a;
+    --ink1: #F1EEE9;
+    --font1: #5E524A;
+    --font2: #CEA978;
+    --line :#2D7A4F;
+    --hover: #B0A9A4;
+    --padding: 20px 50px
+}
+
+body {
+    width: 480px;
+    height: auto;
+    margin: 0 auto;
+    background-color: var(--white);
+}
+
+img{
+    width: 50%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: var(--ink1);
+}
+
+.header_i{
+    padding: 20px 50px;
+}
+
+#hero_intro{
+    background-image: url(./img/hero_img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 83px);
+    padding: var(--padding);
+    display: flex;
+    align-items: end;
+}
+
+#hero_intro .element_wrap{
+    color: var(--font1);
+    
+}
+
+.element_wrap>h2{
+    font-family: 'SST', 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+}
+
+.element_wrap>h3{
+    font-family: 'SST', 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+.element_wrap .line{
+    background-color:var(--line);
+    border: none;
+    padding: 10px 30px;
+    box-shadow: 0 4px 20px rgba(45, 122, 79, 0.3);
+    color: var(--white);
+    width: 100%;
+    margin-bottom: 50px;
+}
