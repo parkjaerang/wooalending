@@ -262,11 +262,6 @@ header{
     transition: background-color .15s ease, color .15s ease;
 }
 
-.sig_tag:hover{
-    background-color: var(--font2);
-    color: var(--white);
-}
-
 #procedure_type{
     margin-top: 50px;
     padding-top: 30px;
