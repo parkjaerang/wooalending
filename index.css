@@ -172,6 +172,13 @@ header{
     display: none;
 }
 
+/* 最初と最後のカードを中央に寄せるための余白（JSではなくCSSで固定） */
+.sig_track::before,
+.sig_track::after{
+    content: "";
+    flex: 0 0 calc((100% - min(85vw, 408px)) / 2);
+}
+
 .sig_track{
     cursor: grab;
 }

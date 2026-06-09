@@ -84,14 +84,7 @@ if (sigTrack) {
     let paused = false;
     let isDragging = false;
 
-    // 最初と最後のカードも中央にこられるよう両端に余白
-    function applyEdgePadding() {
-        const card = sigTrack.querySelector('.sig_card');
-        if (!card) return;
-        const pad = Math.max(0, (sigTrack.clientWidth - card.offsetWidth) / 2);
-        sigTrack.style.paddingLeft = pad + 'px';
-        sigTrack.style.paddingRight = pad + 'px';
-    }
+    // 両端の余白は CSS の .sig_track::before / ::after で中央寄せを担保する
 
     function nextSlide() {
         const card = sigTrack.querySelector('.sig_card');
@@ -104,9 +97,6 @@ if (sigTrack) {
             sigTrack.scrollBy({ left: step, behavior: 'smooth' });
         }
     }
-
-    applyEdgePadding();
-    window.addEventListener('resize', applyEdgePadding);
 
     function start() {
         if (timer) return;
