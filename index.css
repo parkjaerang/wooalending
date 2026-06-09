@@ -176,7 +176,7 @@ header{
 .sig_track::before,
 .sig_track::after{
     content: "";
-    flex: 0 0 calc((100% - min(75vw, 360px)) / 2);
+    flex: 0 0 calc((100% - min(68vw, 325px)) / 2);
 }
 
 .sig_track{
@@ -193,7 +193,7 @@ header{
 }
 
 .sig_card{
-    flex: 0 0 min(75vw, 360px);
+    flex: 0 0 min(68vw, 325px);
     max-width: 500px;
     scroll-snap-align: center;
     background-color: var(--white);
