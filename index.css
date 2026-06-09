@@ -186,7 +186,7 @@ header{
 }
 
 .sig_card{
-    flex: 0 0 70%;
+    flex: 0 0 85%;
     max-width: 500px;
     scroll-snap-align: center;
     background-color: var(--white);
